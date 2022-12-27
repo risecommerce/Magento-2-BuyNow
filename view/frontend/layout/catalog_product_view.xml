@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Class AddProductLabelAttributes
+ *
+ * PHP version 8
+ *
+ * @category Risecommerce
+ * @package  Risecommerce_BuyNow
+ * @author   Risecommerce <magento@risecommerce.com>
+ * @license  https://www.risecommerce.com  Open Software License (OSL 3.0)
+ * @link     https://www.risecommerce.com
+ */
+ -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="product.info.addtocart">
+            <block class="Magento\Catalog\Block\Product\View"
+                   name="product.buynow"
+                   template="Risecommerce_BuyNow::buynow-view.phtml"
+                   before="-" ifconfig="buynow/general/enable_view"/>
+        </referenceBlock>
+        <referenceBlock name="product.info.addtocart.additional">
+            <block class="Magento\Catalog\Block\Product\View"
+                   name="product.buynow.config"
+                   template="Risecommerce_BuyNow::buynow-view.phtml"
+                   before="-" ifconfig="buynow/general/enable_view"/>
+        </referenceBlock>
+    </body>
+</page>
